@@ -1,0 +1,68 @@
+SQL Schema:
+
+sql queries:
+
+    1. create database medicareapp;
+
+    2. use medicareapp;
+
+    3. show tables;
+	
+	| Tables_in_medicareapp |
+	+-----------------------+
+	| admin                 |
+	| cart                  |
+	| contact_us            |
+	| medicines             |
+	| user                  |
+	+-----------------------+
+
+    4. select * from admin;
+
+        +----------+------------+----------+
+	| admin_id | admin_name | password |
+	+----------+------------+----------+
+	|        1 | Arjun      | qwerty   |
+	|        2 | Arun       | qwertyui |
+	|        3 | abc        | 123@     |
+	+----------+------------+----------+
+
+    5. select * from cart;
+
+        +-------------+-----------------------------------------+---------------+-------+
+	| medicine_id | description                             | medicine_name | price |
+	+-------------+-----------------------------------------+---------------+-------+
+	|           6 | Used to reduce a high temperature fever | Paracetamol   |    20 |
+	|           7 | To treat high blood pressure            | Tazloc-AM     |    50 |
+	+-------------+-----------------------------------------+---------------+-------+
+
+    6. select * from contact_us;
+
+      
+   	+------+------------+--------------------------------+-----------------+---------+
+	| c_id | contact_no | description                    | email_id        | name    |
+	+------+------------+--------------------------------+-----------------+---------+
+	|    3 | 1234567890 | Need a tablet for stomach ache | kumar@gmail.com | Kumar   |
+	|    4 |  789456123 | NO Description                 | @gmail.com      | dhanush |
+	+------+------------+--------------------------------+-----------------+---------+
+
+    7. select * from medicines;
+
+	+-------------+-----------------------------------------+------------+------------------+---------------+-------+--------+-----------+--------+
+	| medicine_id | description                             | expdate    | manufacture_date | medicine_name | price | seller | status    | type   |
+	+-------------+-----------------------------------------+------------+------------------+---------------+-------+--------+-----------+--------+
+	|           5 |  To control fever                       | 2022-04-15 | 2022-03-04       | Dolo 650      |    10 | Ram    | Available | Tablet |
+	|           6 | Used to reduce a high temperature fever | 2022-04-22 | 2022-03-08       | Paracetamol   |    20 | Ravi   | Available | Tablet |
+	|           7 | To treat high blood pressure            | 2022-04-29 | 2022-03-09       | Tazloc-AM     |    50 | Bheem  | Available | Tablet |
+	|          11 | For cold                                | 2022-04-30 | 2022-03-10       | DOLO 900      |   100 | Ravi   | Available | Tablet |
+	+-------------+-----------------------------------------+------------+------------------+---------------+-------+--------+-----------+--------+
+
+    8. select * from user;
+
+	+---------+-----+------------+--------+-----------+------------+----------+----------+
+	| user_id | age | first_name | gender | last_name | mobile_no  | password | username |
+	+---------+-----+------------+--------+-----------+------------+----------+----------+
+	|       5 |  25 | Ram        | male   | b         | 456237890  | zxcv     | zxcv     |
+	|       6 |  25 | ravi       | male   | V         | 456237890  | abc      | abc      |
+	|       7 |  30 | Manpreet   | male   | B         | 9856741235 | Manpreet | Manpreet |
+	+---------+-----+------------+--------+-----------+------------+----------+----------+
